@@ -19,9 +19,6 @@ def createFile(nome):
         a.close()
     except:
         print('Houve um erro na criação do arquivo.')
-    else:
-        print(f'Arquivo {nome} criado com sucesso!')
-
 
 # Salva o cadastro realizado pelo usuário
 def setUserData(arquivo, user):

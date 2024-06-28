@@ -12,8 +12,8 @@ Este projeto é uma implementação simples e divertida do jogo Pedra, Papel e T
     - <b>SISTEMA DE PONTOS:</b> O usuário pode obter pontos por vitórias ou perder pontos pelas derrotas. <br>
     <img src="imagens/pontos.png" width="300"/> <br><br>
     - <b>SISTEMA DE RANKING:</b> O programa faz um ranking de acordo com as pontuações obtidas pelo usuário. <br>
-    <img src="imagens/ranking.png" width="300"/> <br><br>
+    <img src="imagens/rank.png" width="300"/> <br><br>
     - <b>SISTEMA DE LOGIN:</b> O usuário precisa se cadastrar e fazer login para jogar. <br>
-    <img src="imagens/cadastro.png" width="300"/> <br><br>
+    <img src="imagens/login.png" width="300"/> <br><br>
     - <b>REPETIÇÃO DO JOGO:</b> Permite jogar múltiplas rodadas sem reiniciar o programa.
 </div>

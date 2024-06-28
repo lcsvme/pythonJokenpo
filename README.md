@@ -1,6 +1,8 @@
 <div align="center">
 <h1><b>JOKENPÔ EM PYTHON!</b></h1>
-Este projeto é uma implementação simples e divertida do jogo Pedra, Papel e Tesoura, onde você pode desafiar o computador. Desenvolvido em Python, ele serve como um ótimo exemplo de como criar jogos interativos básicos com lógica condicional. Ideal para iniciantes em programação que desejam aprender de forma prática.
+<p>Este projeto é uma implementação simples e divertida do jogo Pedra, Papel e Tesoura, onde você pode desafiar o computador. Desenvolvido em Python, ele serve como um ótimo exemplo de como criar jogos interativos básicos com lógica condicional. Ideal para iniciantes em programação que desejam aprender de forma prática.</p>
+
+<p>O 'pythonJokenpo' inclui um sistema de salvamento de dados que permite armazenar e recuperar informações do jogo, como pontuações e resultados, em um arquivo de texto. Esse sistema é implementado no arquivo 'arquivo.py'.</p>
 
 <h2>FUNCIONALIDADES</h2>
     - <b>JOGO INTERATIVO:</b> O usuário pode jogar contra o computador. <br>

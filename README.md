@@ -5,6 +5,8 @@
 <p>O 'pythonJokenpo' inclui um sistema de salvamento de dados que permite armazenar e recuperar informações do jogo, como pontuações e resultados, em um arquivo de texto. Esse sistema é implementado no arquivo 'arquivo.py'.</p>
 
 <h2>FUNCIONALIDADES</h2>
+    - <b>SISTEMA DE LOGIN:</b> O usuário precisa se cadastrar e fazer login para jogar. <br>
+    <img src="imagens/login.png" width="300"/> <br><br>
     - <b>JOGO INTERATIVO:</b> O usuário pode jogar contra o computador. <br>
     <img src="imagens/menu.png" width="300"/> <br><br>
     - <b>ESCOLHAS DO JOGADOR:</b> O jogador escolhe entre Pedra, Papel ou Tesoura. <br>
@@ -15,7 +17,5 @@
     <img src="imagens/pontos.png" width="300"/> <br><br>
     - <b>SISTEMA DE RANKING:</b> O programa faz um ranking de acordo com as pontuações obtidas pelo usuário. <br>
     <img src="imagens/rank.png" width="300"/> <br><br>
-    - <b>SISTEMA DE LOGIN:</b> O usuário precisa se cadastrar e fazer login para jogar. <br>
-    <img src="imagens/login.png" width="300"/> <br><br>
     - <b>REPETIÇÃO DO JOGO:</b> Permite jogar múltiplas rodadas sem reiniciar o programa.
 </div>

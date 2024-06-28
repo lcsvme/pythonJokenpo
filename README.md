@@ -3,7 +3,7 @@ Este projeto é uma implementação simples e divertida do jogo Pedra, Papel e T
 
 ### FUNCIONALIDADES
 <div align="center">
-    - <h3><b>Jogo Interativo:</b></h3> <p>O usuário pode jogar contra o computador.</p> <br>
+    - <h3><b>Jogo Interativo:</b></h3> O usuário pode jogar contra o computador. <br>
     - <b>Escolhas do Jogador:</b> O jogador escolhe entre Pedra, Papel ou Tesoura. <br>
     - <b>Resultados Automáticos:</b> O programa determina automaticamente o vencedor com base nas regras do jogo. <br>
     - <b>Sistema de Pontos:</b> O usuário pode obter pontos por vitórias ou perder pontos pelas derrotas. <br>

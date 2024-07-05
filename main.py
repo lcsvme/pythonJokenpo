@@ -88,7 +88,7 @@ def playGame():
             return
         # Caso o usuário escolha a opção login, irá verificar os dados.
         elif userOption == 'Login':
-            user = input('DIGITE O NOME DE USUÁRIO: ')
+            user = input('DIGITE O NOME DE USUÁRIO: ').strip().lower()
             if verifyLogin(arquivo, user):
                 break
         # Caso o usuário escolha a opção cadastrar, irá requisitar os dados para o cadastro.

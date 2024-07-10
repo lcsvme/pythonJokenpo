@@ -1,4 +1,5 @@
 import time
+import os
 
 # Imprime uma linha ( ========================================== )
 def line(tamanho = 42):
@@ -20,5 +21,5 @@ def menu(* lista):
 # Limpa o console imprimindo 20 (ou o valor passado no parâmetro) linhas vazias
 def clearConsole(tempo = 1, quantidade = 20):
     time.sleep(tempo)
-    for i in range(quantidade):
-        print()
+    os.system('clear')  # Limpa a tela no Linux e macOS
+    os.system('cls')   # Limpa a tela no Windows

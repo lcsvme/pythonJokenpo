@@ -200,4 +200,3 @@ def getRanking(arquivo):
             # Imprime os usuários e a pontuação em ordem do maior para o menor
             print(f'{i+1}. {userSalvo.upper()}{' ' *  espacosLivres}{pontos}')
         a.close()
-            

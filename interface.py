@@ -19,7 +19,7 @@ def menu(* lista):
     line()
 
 # Limpa o console.
-def clearConsole(tempo = 1, quantidade = 20):
+def clearConsole(tempo = 1):
     time.sleep(tempo)
     os.system('clear')  # Limpa a tela no Linux e macOS
     os.system('cls')   # Limpa a tela no Windows

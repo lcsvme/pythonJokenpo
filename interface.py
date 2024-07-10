@@ -18,7 +18,7 @@ def menu(* lista):
         print(f'[{i+1}]. {lista[i]}')
     line()
 
-# Limpa o console imprimindo 20 (ou o valor passado no parâmetro) linhas vazias
+# Limpa o console.
 def clearConsole(tempo = 1, quantidade = 20):
     time.sleep(tempo)
     os.system('clear')  # Limpa a tela no Linux e macOS

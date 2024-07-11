@@ -5,17 +5,30 @@
 <p>O 'pythonJokenpo' inclui um sistema de salvamento de dados que permite armazenar e recuperar informações do jogo, como pontuações e resultados, em um arquivo de texto. Esse sistema é implementado no arquivo 'arquivo.py'.</p>
 
 <h2>FUNCIONALIDADES</h2>
-    - <b>SISTEMA DE LOGIN:</b> O usuário precisa se cadastrar e fazer login para jogar. <br>
-    <img src="imagens/login.png" width="300"/> <br><br>
-    - <b>JOGO INTERATIVO:</b> O usuário pode jogar contra o computador. <br>
-    <img src="imagens/menu.png" width="300"/> <br><br>
-    - <b>ESCOLHAS DO JOGADOR:</b> O jogador escolhe entre Pedra, Papel ou Tesoura. <br>
-    <img src="imagens/escolhas.png" width="300"/> <br><br>
-    - <b>RESULTADOS AUTOMÁTICOS:</b> O programa determina automaticamente o vencedor com base nas regras do jogo. <br>
-    <img src="imagens/vitoria.png" width="300"/> <br><br>
-    - <b>SISTEMA DE PONTOS:</b> O usuário pode obter pontos por vitórias ou perder pontos pelas derrotas. <br>
-    <img src="imagens/pontos.png" width="300"/> <br><br>
-    - <b>SISTEMA DE RANKING:</b> O programa faz um ranking de acordo com as pontuações obtidas pelo usuário. <br>
-    <img src="imagens/rank.png" width="300"/> <br><br>
-    - <b>REPETIÇÃO DO JOGO:</b> Permite jogar múltiplas rodadas sem reiniciar o programa.
+        <h3><b>- SISTEMA DE LOGIN</b></h3>
+        <img src="imagens/login.png" width="300"/>
+        <p>O usuário precisa se cadastrar e fazer login para jogar.</p>
+
+<h3><b>- JOGO INTERATIVO</b></h3>
+<img src="imagens/menu.png" width="300"/>
+<p>O usuário pode jogar contra o computador.</p>
+
+<h3><b>- ESCOLHAS DO JOGADOR:</b></h3>
+<img src="imagens/escolhas.png" width="300"/>
+<p>O jogador escolhe entre Pedra, Papel ou Tesoura.</p>
+
+<h3><b>- RESULTADOS AUTOMÁTICOS</b></h3>
+<img src="imagens/vitoria.png" width="300"/>
+<p>O programa determina automaticamente o vencedor com base nas regras do jogo.</p>
+
+<h3><b>- SISTEMA DE PONTOS</b></h3>
+<img src="imagens/pontos.png" width="300"/>
+<p>O usuário pode obter pontos por vitórias ou perder pontos pelas derrotas.</p>
+
+<h3><b>- SISTEMA DE RANKING</b></h3>
+<img src="imagens/rank.png" width="300"/>
+<p>O programa faz um ranking de acordo com as pontuações obtidas pelo usuário.</p>
+
+<h3><b>REPETIÇÃO DO JOGO</b></h3>
+<p>Permite jogar múltiplas rodadas sem reiniciar o programa.</p>
 </div>

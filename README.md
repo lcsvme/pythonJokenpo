@@ -1,34 +1,46 @@
-<div align="center">
-<h1><b>JOKENPÔ EM PYTHON!</b></h1>
-<p>Este projeto é uma implementação simples e divertida do jogo Pedra, Papel e Tesoura, onde você pode desafiar o computador. Desenvolvido em Python, ele serve como um ótimo exemplo de como criar jogos interativos básicos com lógica condicional. Ideal para iniciantes em programação que desejam aprender de forma prática.</p>
+# Python Jokenpo (Rock, Paper, Scissors)
 
-<p>O 'pythonJokenpo' inclui um sistema de salvamento de dados que permite armazenar e recuperar informações do jogo, como pontuações e resultados, em um arquivo de texto. Esse sistema é implementado no arquivo 'arquivo.py'.</p>
+Welcome to the Python Jokenpo repository! This project is a simple implementation of the classic game Rock, Paper, Scissors, incorporating user registration, login, and score tracking.
 
-<h2>FUNCIONALIDADES</h2>
-        <h3><b>- SISTEMA DE LOGIN</b></h3>
-        <img src="imagens/login.png" width="300"/>
-        <p>O usuário precisa se cadastrar e fazer login para jogar.</p>
+## Features
 
-<h3><b>- JOGO INTERATIVO</b></h3>
-<img src="imagens/menu.png" width="300"/>
-<p>O usuário pode jogar contra o computador.</p>
+- **User Registration:** Register new users and save their credentials securely.
+- **User Login:** Authenticate users with their credentials.
+- **Score Management:** Track and update user scores, victories, defeats, and draws.
+- **Ranking System:** Display a ranking of users based on their scores.
+- **Terminal Interface:** Provides a user-friendly terminal interface with various formatting options.
 
-<h3><b>- ESCOLHAS DO JOGADOR:</b></h3>
-<img src="imagens/escolhas.png" width="300"/>
-<p>O jogador escolhe entre Pedra, Papel ou Tesoura.</p>
+## Files
 
-<h3><b>- RESULTADOS AUTOMÁTICOS</b></h3>
-<img src="imagens/vitoria.png" width="300"/>
-<p>O programa determina automaticamente o vencedor com base nas regras do jogo.</p>
+- `arquivo.py`: Contains functions for file operations including user data management, login verification, and score updates.
+- `interface.py`: Provides utility functions for terminal formatting such as printing lines, headers, and menus.
+- `main.py`: Entry point of the application. Implements the main game logic and user interaction.
 
-<h3><b>- SISTEMA DE PONTOS</b></h3>
-<img src="imagens/pontos.png" width="300"/>
-<p>O usuário pode obter pontos por vitórias ou perder pontos pelas derrotas.</p>
+## How to Use
 
-<h3><b>- SISTEMA DE RANKING</b></h3>
-<img src="imagens/rank.png" width="300"/>
-<p>O programa faz um ranking de acordo com as pontuações obtidas pelo usuário.</p>
+1. **Run the Application:**
+   - Execute `main.py` to start the game.
 
-<h3><b>REPETIÇÃO DO JOGO</b></h3>
-<p>Permite jogar múltiplas rodadas sem reiniciar o programa.</p>
-</div>
+2. **User Registration:**
+   - Follow the prompts to register a new user.
+
+3. **User Login:**
+   - Log in with your credentials. If successful, you can play the game.
+
+4. **Playing the Game:**
+   - After logging in, play Rock, Paper, Scissors and see your score and ranking.
+
+## Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/lcsvme/pythonJokenpo.git
+```
+
+## Contributions
+
+Contributions are welcome! If you have improvements or suggestions, feel free to open an issue or submit a pull request.
+
+## Credits
+
+Made with love by [Luan Vieira](https://github.com/lcsvme). Check out my other projects on GitHub!

@@ -1,154 +1,155 @@
-from interface import *  # Importa as funções do módulo interface.
-from arquivo import *  # Importa as funções do módulo arquivo.
+from interface import *  # Imports functions from the interface module.
+from arquivo import *  # Imports functions from the arquivo module.
 import random
 import time
 
-arquivo = 'userData'  # Define o nome do arquivo que será criado.
+file_name = 'userData'  # Defines the name of the file to be created.
 
-# Verifica se já existe um arquivo criado no sistema.
-if not fileExists(arquivo):
-    createFile(arquivo)  # Se não, cria um arquivo.
+# Checks if a file already exists in the system.
+if not fileExists(file_name):
+    createFile(file_name)  # If not, creates a file.
 
 
-# Obtém a opção (Login, Cadastrar, Sair) do jogador.
+# Gets the option (Login, Register, Exit) from the user.
 def getUserData():
-
-    # Imprime o menu de escolhas para o jogador.
+    # Prints the choice menu for the user.
     header('LOGIN')
     menu('Login',
-         'Cadastrar',
-         'Sair')
-    
-    userOption = input('DIGITE O NÚMERO DA OPÇÃO: ')
-    options = {'1': 'Login', '2': 'Cadastrar', '3': 'Sair'}  # Dicionário com as opções.
+         'Register',
+         'Exit')
 
-    # Verifica se o usuário digitou uma opção válida.
-    if userOption in options:
-        return options[userOption]
-    # Se não, imprime uma mensagem de erro.
+    user_option = input('ENTER THE NUMBER OF YOUR OPTION: ')
+    options = {'1': 'Login', '2': 'Register', '3': 'Exit'}  # Dictionary with options.
+
+    # Checks if the user entered a valid option.
+    if user_option in options:
+        return options[user_option]
+    # If not, prints an error message.
     else:
-        print('OPÇÃO INVÁLIDA! TENTE NOVAMENTE!')
-        return getUserData()  # Chama a função novamente para o usuário poder digitar uma opção válida.
+        print('INVALID OPTION! PLEASE TRY AGAIN!')
+        return getUserData()  # Calls the function again for the user to enter a valid option.
 
 
-# Obtém a escolha (Pedra, Papel, Tesoura) do jogador.
+# Gets the choice (Rock, Paper, Scissors) from the user.
 def getUserChoice():
-    # Imprime o menu de escolhas para o jogador.
-    header('JOKENPÔ')
-    menu('Pedra', 'Papel', 'Tesoura', 'Ver Pontuação', 'Ver Ranking', 'Sair')
+    # Prints the choice menu for the user.
+    header('ROCK PAPER SCISSORS')
+    menu('Rock', 'Paper', 'Scissors', 'View Score', 'View Ranking', 'Exit')
 
-    userChoice = input('DIGITE O NÚMERO DA SUA ESCOLHA: ')
-    choices = {'1': 'Pedra', '2': 'Papel', '3': 'Tesoura', '4': 'Ver Pontuação', '5': 'Ver Ranking', '6': 'Sair'}  # DIcionário com as opções.
+    user_choice = input('ENTER THE NUMBER OF YOUR CHOICE: ')
+    choices = {'1': 'Rock', '2': 'Paper', '3': 'Scissors', '4': 'View Score', '5': 'View Ranking',
+               '6': 'Exit'}  # Dictionary with options.
 
-    # Verifica se o usuário digitou uma escolha válida.
-    if userChoice in choices:
-        return choices[userChoice]
-    # Se não, imprime uma mensagem de erro.
+    # Checks if the user entered a valid choice.
+    if user_choice in choices:
+        return choices[user_choice]
+    # If not, prints an error message.
     else:
-        print('ESCOLHA INVÁLIDA! TENTE NOVAMENTE!')
-        return getUserChoice()  # Chama a função novamente para o usuário poder digitar uma opção válida.
+        print('INVALID CHOICE! PLEASE TRY AGAIN!')
+        return getUserChoice()  # Calls the function again for the user to enter a valid choice.
 
 
-# Obtém a escolha aleatória do computador.
+# Gets the computer's random choice.
 def getComputerChoice():
-    choices = ['Pedra', 'Papel', 'Tesoura']  # Lista com as opções disponíveis para o computador.
-    return random.choice(choices)  # Retorna uma escolha aleatória para o computador.
+    choices = ['Rock', 'Paper', 'Scissors']  # List of available choices for the computer.
+    return random.choice(choices)  # Returns a random choice for the computer.
 
 
-# Obtém o vencedor da partida atual.
-def getWinner(userChoice, computerChoice):
-    # Mostra quais escolhas foram feitas pelo usuário e o computador.
-    print(f'SUA ESCOLHA: {userChoice}')
-    print('O COMPUTADOR ESCOLHEU... ', end='')
+# Determines the winner of the current round.
+def getWinner(user_choice, computer_choice):
+    # Shows the choices made by the user and the computer.
+    print(f'YOUR CHOICE: {user_choice}')
+    print('THE COMPUTER CHOSE... ', end='')
     time.sleep(1)
-    print(computerChoice)
+    print(computer_choice)
 
-    # Verifica se o jogo deu empate.
-    if userChoice == computerChoice:
-        return 'EMPATE!'
-    # Verifica se o usuário ganhou a partida.
-    elif (userChoice == 'Pedra' and computerChoice == 'Tesoura') or \
-         (userChoice == 'Papel' and computerChoice == 'Pedra') or \
-         (userChoice == 'Tesoura' and computerChoice == 'Papel'):
-        return 'VOCÊ GANHOU!'
-    # Caso nenhuma das condições passem, significa que o usuário perdeu a partida.
+    # Checks if the game is a tie.
+    if user_choice == computer_choice:
+        return 'TIE!'
+    # Checks if the user won the round.
+    elif (user_choice == 'Rock' and computer_choice == 'Scissors') or \
+            (user_choice == 'Paper' and computer_choice == 'Rock') or \
+            (user_choice == 'Scissors' and computer_choice == 'Paper'):
+        return 'YOU WON!'
+    # If none of the above, the user lost the round.
     else:
-        return 'VOCÊ PERDEU!'
+        return 'YOU LOST!'
 
 
-# Controla o fluxo do jogo, gerenciando o login do usuário, a execução das rodadas de jogo e a atualização dos pontos.
+# Manages the game flow, handling user login, running game rounds, and updating scores.
 def playGame():
-    # Enquanto o usuário não fazer o login, não irá jogar!
+    # While the user is not logged in, they cannot play!
     while True:
-        userOption = getUserData()  # Guarda o retorno da função getUserData() dentro da variável userOption.
+        user_option = getUserData()  # Stores the return value of getUserData() in user_option.
 
-        # Caso o usuário escolha sair, o programa irá encerrar.
-        if userOption == 'Sair':
-            header('SAINDO!')
+        # If the user chooses to exit, the program will terminate.
+        if user_option == 'Exit':
+            header('EXITING!')
             return
-        # Caso o usuário escolha a opção login, irá verificar os dados.
-        elif userOption == 'Login':
-            user = input('DIGITE O NOME DE USUÁRIO: ').strip().lower()
-            if verifyLogin(arquivo, user):
+        # If the user chooses to log in, it will verify the credentials.
+        elif user_option == 'Login':
+            user = input('ENTER USERNAME: ').strip().lower()
+            if verifyLogin(file_name, user):
                 break
-        # Caso o usuário escolha a opção cadastrar, irá requisitar os dados para o cadastro.
-        elif userOption == 'Cadastrar':
-            user = input('DIGITE O NOME DE USUÁRIO: ').strip().lower()
-            setUserData(arquivo, user)       
+        # If the user chooses to register, it will request the registration details.
+        elif user_option == 'Register':
+            user = input('ENTER USERNAME: ').strip().lower()
+            setUserData(file_name, user)
 
-    # Se login for realizado com sucesso, o jogo irá começar .
+            # If login is successful, the game will start.
     while True:
-        userChoice = getUserChoice()  # Guarda o retorno da função getUserChoice() dentro da variável userChoice.
+        user_choice = getUserChoice()  # Stores the return value of getUserChoice() in user_choice.
 
-        # Obtém os pontos, vitórias, derrotas e empates do usuário do .txt, sem imprimir os resultados na tela.
-        pontos, vitorias, derrotas, empates = getPoints(arquivo, user, imprimir = False)
+        # Gets the user's points, wins, losses, and ties from the .txt file, without printing the results.
+        points, wins, losses, ties = getPoints(file_name, user, show=False)
 
-        # Caso o usuário escolha sair, o programa irá encerrar.
-        if userChoice == 'Sair':
-            header('SAINDO!')
+        # If the user chooses to exit, the program will terminate.
+        if user_choice == 'Exit':
+            header('EXITING!')
             return
-        # Caso o jogador escolher ver a pontuação, irá mostrar os dados e continuar o jogo.
-        elif userChoice == 'Ver Pontuação':
+        # If the player chooses to view the score, it will show the data and continue the game.
+        elif user_choice == 'View Score':
             clearConsole()
-            getPoints(arquivo, user, True)
+            getPoints(file_name, user, True)
             time.sleep(1.5)
             continue
-        # Caso o jogador escolher ver o ranking, irá mostrar o ranking e continuar o jogo.
-        elif userChoice == 'Ver Ranking':
+        # If the player chooses to view the ranking, it will show the ranking and continue the game.
+        elif user_choice == 'View Ranking':
             clearConsole()
-            getRanking(arquivo)
+            getRanking(file_name)
             time.sleep(1.5)
             continue
 
-        computerChoice = getComputerChoice() # Guarda o retorno da função getComputerChoice() dentro da variável computerChoice.
-        result = getWinner(userChoice, computerChoice) # Guarda o retorno da função getWinner() dentro da variável result.
+        computer_choice = getComputerChoice()  # Stores the return value of getComputerChoice() in computer_choice.
+        result = getWinner(user_choice, computer_choice)  # Stores the return value of getWinner() in result.
         time.sleep(1)
         header(result)
         time.sleep(1)
 
-        # Atualiza a contagem de pontos
-        if result == 'VOCÊ GANHOU!':
+        # Updates the score count
+        if result == 'YOU WON!':
             clearConsole(0.75)
-            vitorias += 1 # Atualiza a contagem de vitórias
-            pontos += 100 # Atualiza a quantidade de pontos
+            wins += 1  # Updates the win count
+            points += 100  # Updates the points
 
-        elif result == 'VOCÊ PERDEU!':
+        elif result == 'YOU LOST!':
             clearConsole(0.75)
-            derrotas += 1 # Atualiza a contagem de derrotas
-             # Atualiza a quantidade de pontos, não permitindo o usuário ficar com pontos negativos.
-            if pontos >= 75:
-                pontos -= 75
-            if pontos == 50:
-                pontos -= 50
-            if pontos == 25:
-                pontos -= 25
+            losses += 1  # Updates the loss count
+            # Updates the points, not allowing the user to have negative points.
+            if points >= 75:
+                points -= 75
+            if points == 50:
+                points -= 50
+            if points == 25:
+                points -= 25
 
-        elif result == 'EMPATE!':
+        elif result == 'TIE!':
             clearConsole(0.75)
-            empates += 1 # Atualiza a contagem de empates
+            ties += 1  # Updates the tie count
 
-        setPoints(arquivo, user, pontos, vitorias, derrotas, empates)
+        setPoints(file_name, user, points, wins, losses, ties)
 
-# Inicia o jogo
+
+# Starts the game
 if __name__ == "__main__":
     playGame()

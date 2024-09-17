@@ -1,25 +1,35 @@
 import time
 import os
 
-# Imprime uma linha ( ========================================== )
-def line(tamanho = 42):
-    print('=' * tamanho)
+# Prints a line ( ========================================== )
+def line(length=42):
+    print('=' * length)
 
-# Imprime um cabeçalho com a linha() e o texto centralizado no meio
-def header(* texto, tamanho = 42):
-    line(tamanho)
-    for i in range (len(texto)):
-        print(texto[i].center(42))
-    line(tamanho)
+# Prints a header with the line() and centered text
+def header(*text, length=42):
+    line(length)
+    for item in text:
+        print(item.center(length))
+    line(length)
 
-# Imprime o menu com as opções recebidas no parâmetro da função
-def menu(* lista):
-    for i in range(0, len(lista)):
-        print(f'[{i+1}]. {lista[i]}')
+# Prints the menu with the options provided as parameters
+def menu(*options):
+    for i, option in enumerate(options, start=1):
+        print(f'[{i}]. {option}')
     line()
 
-# Limpa o console.
-def clearConsole(tempo = 1):
-    time.sleep(tempo)
-    os.system('clear')  # Limpa a tela no Linux e macOS
-    os.system('cls')   # Limpa a tela no Windows
+# Clears the console after the time passed as argument
+def clearConsole(cooldown = 1):
+    import os
+    import time
+
+    time.sleep(cooldown) # Wait for the time passed as argument
+    # If your IDE doesn't support the clear command, the console will be cleaned by printing 50 blank lines
+    for i in range(50):
+        print()
+
+    # If your IDE supports the clear command, it will be used
+    if os.name == 'nt': # If the OS is Windows
+        os.system('cls')
+    else: # If the OS is Linux or MacOS
+        os.system('clear')

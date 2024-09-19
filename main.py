@@ -111,12 +111,15 @@ def playGame():
         elif user_choice == 'View Score':
             clearConsole()
             getPoints(file_name, user, True)
+            sair = input('PRESS ANYTHING TO CONTINUE... ')
             time.sleep(1.5)
             continue
         # If the player chooses to view the ranking, it will show the ranking and continue the game.
         elif user_choice == 'View Ranking':
             clearConsole()
             getRanking(file_name)
+            line()
+            sair = input('PRESS ANYTHING TO CONTINUE... ')
             time.sleep(1.5)
             continue
 
